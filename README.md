@@ -1,5 +1,7 @@
 # ATS Jobs Scraper (CLI)
 
+[![adapter-freshness](https://github.com/rezearcher/ats-jobs-scraper-cli/actions/workflows/freshness.yml/badge.svg)](https://github.com/rezearcher/ats-jobs-scraper-cli/actions/workflows/freshness.yml)
+
 Give it **company domains**, get back **normalized, deduplicated job postings** across seven
 applicant-tracking systems — in one consistent schema. No board slugs to look up, no per-ATS
 integration to write, **no API key, and zero dependencies**.
@@ -56,6 +58,27 @@ Every company hosts its careers page on a different ATS, and they **migrate betw
   vendor each company uses.
 - **One normalized schema** across all platforms, so downstream code never branches per-ATS.
 - **Maintained adapters** — when a platform changes its response, the adapter is updated centrally.
+
+## Maintained — live adapter health
+
+ATS feeds drift silently: a renamed field returns rows with `null` titles, a moved endpoint
+returns zero — the run "succeeds" but the data is junk, and a plain "it ran" check never notices.
+A scheduled probe runs **daily** ([`.github/workflows/freshness.yml`](.github/workflows/freshness.yml)),
+hitting a large live canary board per platform and grading three things that break independently:
+
+1. **Reachable** — the endpoint still answers.
+2. **Populated** — the canary still returns ≥ 1 record.
+3. **Schema-intact** — records still carry `id` / `title` / `url` above a 90% threshold.
+
+On any drift the probe exits non-zero and the workflow opens a tracking issue, so breakage is
+caught here — before it reaches your run. Run it yourself any time:
+
+```bash
+node health-check.mjs            # probe all seven adapters against live canaries
+node health-check.mjs lever ashby # probe a subset
+```
+
+The green badge above is the current state of all seven adapters.
 
 ## Supported platforms
 

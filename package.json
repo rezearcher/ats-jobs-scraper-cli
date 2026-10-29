@@ -10,7 +10,8 @@
     "node": ">=18"
   },
   "scripts": {
-    "start": "node cli.js"
+    "start": "node cli.js",
+    "health": "node health-check.mjs"
   },
   "keywords": [
     "jobs",
