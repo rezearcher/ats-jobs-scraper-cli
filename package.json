@@ -1,0 +1,33 @@
+{
+  "name": "ats-jobs-scraper-cli",
+  "version": "1.0.0",
+  "description": "Normalized, deduplicated job postings across Greenhouse, Lever, Ashby, SmartRecruiters, Workday, Recruitee and Workable — one schema, company-domain auto-detection, zero dependencies, zero API keys.",
+  "type": "module",
+  "bin": {
+    "ats-jobs": "cli.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node cli.js"
+  },
+  "keywords": [
+    "jobs",
+    "job-scraper",
+    "ats",
+    "greenhouse",
+    "lever",
+    "ashby",
+    "smartrecruiters",
+    "workday",
+    "recruitee",
+    "workable",
+    "recruiting",
+    "hiring",
+    "careers"
+  ],
+  "author": "Grey Ridge Signals Group LLC",
+  "license": "MIT",
+  "homepage": "https://github.com/rezearcher/ats-jobs-scraper-cli#readme"
+}
