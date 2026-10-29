@@ -138,3 +138,12 @@ actor — point your pipeline at an endpoint instead of running Node yourself. S
 ---
 
 Maintained by **Grey Ridge Signals Group LLC**. MIT licensed.
+
+
+## Related tools (same maintained engine)
+
+Built on the same 8-ATS engine as the rest of Grey Ridge's jobs stack:
+
+- **[unified-jobs-scraper-cli](https://github.com/rezearcher/unified-jobs-scraper-cli)** — adds LinkedIn public postings and merges cross-source duplicates into one canonical feed.
+- **[jobs-mcp-server](https://github.com/rezearcher/jobs-mcp-server)** — the same feed as a Model Context Protocol tool for Claude Desktop, Cursor, Cline and other agents.
+- **[company-enrichment-cli](https://github.com/rezearcher/company-enrichment-cli)** — give it a domain, get one clean company record (firmographics, contacts, tech stack) plus a rolled-up hiring-intensity signal from this same ATS engine — buying-intent for sales/prospecting rather than a raw job feed.
