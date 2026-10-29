@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Live adapter health / schema-drift check for the 7 ATS platforms this tool
+// Live adapter health / schema-drift check for the 8 ATS platforms this tool
 // scrapes. Each ATS exposes a keyless public feed whose JSON shape can silently
 // drift: a renamed field makes an adapter return rows with null title/url, or a
 // moved endpoint makes it return zero. A plain "it ran" check misses both — the
@@ -36,6 +36,7 @@ const CANARIES = {
   workday: 'nvidia.wd5:NVIDIAExternalCareerSite',
   recruitee: 'bunq',
   workable: 'epignosis',
+  bamboohr: 'greenhousejuice', // ~9 jobs (BambooHR is SMB; modest but steady board — swap if it empties)
 };
 
 const SCHEMA_THRESHOLD = 0.9;

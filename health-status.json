@@ -1,0 +1,131 @@
+{
+  "generated_at": "2026-10-29T10:22:40.082Z",
+  "tool": "ats-jobs-scraper-cli",
+  "adapters_total": 8,
+  "adapters_ok": 8,
+  "adapters_degraded": 0,
+  "degraded_platforms": [],
+  "healthy": true,
+  "results": [
+    {
+      "platform": "greenhouse",
+      "canary": "stripe",
+      "checked_at": "2026-10-29T10:22:33.627Z",
+      "verdict": "OK",
+      "reachable": true,
+      "count": 724,
+      "field_presence": {
+        "id": 1,
+        "title": 1,
+        "url": 1
+      },
+      "elapsed_ms": 300,
+      "detail": "healthy: 724 records, key fields intact"
+    },
+    {
+      "platform": "lever",
+      "canary": "palantir",
+      "checked_at": "2026-10-29T10:22:33.927Z",
+      "verdict": "OK",
+      "reachable": true,
+      "count": 304,
+      "field_presence": {
+        "id": 1,
+        "title": 1,
+        "url": 1
+      },
+      "elapsed_ms": 1064,
+      "detail": "healthy: 304 records, key fields intact"
+    },
+    {
+      "platform": "ashby",
+      "canary": "openai",
+      "checked_at": "2026-10-29T10:22:34.991Z",
+      "verdict": "OK",
+      "reachable": true,
+      "count": 812,
+      "field_presence": {
+        "id": 1,
+        "title": 1,
+        "url": 1
+      },
+      "elapsed_ms": 519,
+      "detail": "healthy: 812 records, key fields intact"
+    },
+    {
+      "platform": "smartrecruiters",
+      "canary": "Experian",
+      "checked_at": "2026-10-29T10:22:35.510Z",
+      "verdict": "OK",
+      "reachable": true,
+      "count": 50,
+      "field_presence": {
+        "id": 1,
+        "title": 1,
+        "url": 1
+      },
+      "elapsed_ms": 653,
+      "detail": "healthy: 50 records, key fields intact"
+    },
+    {
+      "platform": "workday",
+      "canary": "nvidia.wd5:NVIDIAExternalCareerSite",
+      "checked_at": "2026-10-29T10:22:36.163Z",
+      "verdict": "OK",
+      "reachable": true,
+      "count": 40,
+      "field_presence": {
+        "id": 1,
+        "title": 1,
+        "url": 1
+      },
+      "elapsed_ms": 2752,
+      "detail": "healthy: 40 records, key fields intact"
+    },
+    {
+      "platform": "recruitee",
+      "canary": "bunq",
+      "checked_at": "2026-10-29T10:22:38.915Z",
+      "verdict": "OK",
+      "reachable": true,
+      "count": 22,
+      "field_presence": {
+        "id": 1,
+        "title": 1,
+        "url": 1
+      },
+      "elapsed_ms": 444,
+      "detail": "healthy: 22 records, key fields intact"
+    },
+    {
+      "platform": "workable",
+      "canary": "epignosis",
+      "checked_at": "2026-10-29T10:22:39.359Z",
+      "verdict": "OK",
+      "reachable": true,
+      "count": 12,
+      "field_presence": {
+        "id": 1,
+        "title": 1,
+        "url": 1
+      },
+      "elapsed_ms": 268,
+      "detail": "healthy: 12 records, key fields intact"
+    },
+    {
+      "platform": "bamboohr",
+      "canary": "greenhousejuice",
+      "checked_at": "2026-10-29T10:22:39.627Z",
+      "verdict": "OK",
+      "reachable": true,
+      "count": 9,
+      "field_presence": {
+        "id": 1,
+        "title": 1,
+        "url": 1
+      },
+      "elapsed_ms": 455,
+      "detail": "healthy: 9 records, key fields intact"
+    }
+  ]
+}

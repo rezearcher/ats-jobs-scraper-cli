@@ -2,7 +2,7 @@
 
 [![adapter-freshness](https://github.com/rezearcher/ats-jobs-scraper-cli/actions/workflows/freshness.yml/badge.svg)](https://github.com/rezearcher/ats-jobs-scraper-cli/actions/workflows/freshness.yml)
 
-Give it **company domains**, get back **normalized, deduplicated job postings** across seven
+Give it **company domains**, get back **normalized, deduplicated job postings** across eight
 applicant-tracking systems — in one consistent schema. No board slugs to look up, no per-ATS
 integration to write, **no API key, and zero dependencies**.
 
@@ -11,7 +11,7 @@ Input:  stripe.com  ramp.com  lever:palantir
 Output: one clean row per open role, same fields regardless of which ATS the company uses
 ```
 
-Supported ATS: **Greenhouse · Lever · Ashby · SmartRecruiters · Workday · Recruitee · Workable**.
+Supported ATS: **Greenhouse · Lever · Ashby · SmartRecruiters · Workday · Recruitee · Workable · BambooHR**.
 
 ## Install / run
 
@@ -34,7 +34,7 @@ node cli.js <company...> [--max=N] [--desc] [--pretty]
 
   <company>   domain (stripe.com), bare slug (stripe), or platform:token
               platforms: greenhouse, lever, ashby, smartrecruiters,
-                         workday, recruitee, workable
+                         workday, recruitee, workable, bamboohr
   --max=N     cap jobs per company (default: all)
   --desc      include plain-text job description
   --pretty    pretty-print a JSON array (default: NDJSON, one job per line)
@@ -47,6 +47,7 @@ node cli.js stripe.com ramp.com --max=25                               # auto-de
 node cli.js lever:palantir ashby:ramp --pretty                         # explicit platform:token
 node cli.js workday:nvidia.wd5:NVIDIAExternalCareerSite --desc --max=5  # Workday + descriptions
 node cli.js recruitee:bunq workable:epignosis --max=10                  # Recruitee + Workable
+node cli.js bamboohr:greenhousejuice --desc --max=5                     # BambooHR + descriptions
 ```
 
 ## Why not a single-ATS scraper
