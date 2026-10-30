@@ -1,9 +1,10 @@
-# ATS Jobs Scraper (CLI)
+# Greenhouse Jobs Scraper CLI — plus 7 more ATS, no API key
 
 [![adapter-freshness](https://github.com/rezearcher/ats-jobs-scraper-cli/actions/workflows/freshness.yml/badge.svg)](https://github.com/rezearcher/ats-jobs-scraper-cli/actions/workflows/freshness.yml)
 
-Give it **company domains**, get back **normalized, deduplicated job postings** across eight
-applicant-tracking systems — in one consistent schema. No board slugs to look up, no per-ATS
+Give it **company domains**, get back **normalized, deduplicated job postings** from any
+company's **Greenhouse** board — plus seven more applicant-tracking systems (Lever, Ashby,
+SmartRecruiters, Workday, Recruitee, Workable, BambooHR) — in one consistent schema. No board slugs to look up, no per-ATS
 integration to write, **no API key, and zero dependencies**.
 
 ```
